@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
 
 export default function ContactForm({ onSubmit }) {
     
@@ -64,4 +65,8 @@ export default function ContactForm({ onSubmit }) {
                 >Add contact</button>
         </form>
         )
-}
+};
+
+ContactForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+};
